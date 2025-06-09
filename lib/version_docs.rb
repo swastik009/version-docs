@@ -1,12 +1,19 @@
-module VersionDocs
-  autoload :Document,        "version_docs/document"
-  autoload :VersionManager,  "version_docs/version_manager"
-  autoload :DiffEngine,      "version_docs/diff_engine"
-  autoload :Renderer,        "version_docs/renderer"
-  autoload :Utils,           "version_docs/utils"
+# lib/version_docs.rb
 
-  module Storage
-    autoload :Base,          "version_docs/storage/base"
-    autoload :InMemory,      "version_docs/storage/in_memory"
-  end
-end
+require "active_support"
+require "active_record"
+require "rails"
+
+# Core components
+require_relative "version_docs/document"
+require_relative "version_docs/version_manager"
+require_relative "version_docs/diff_engine"
+require_relative "version_docs/renderer"
+require_relative "version_docs/utils"
+
+# Storage backends
+require_relative "version_docs/storage/base"
+require_relative "version_docs/storage/in_memory"
+
+# Load Railtie to integrate with Rails
+require_relative "version_docs/railtie"
