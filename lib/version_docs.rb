@@ -7,7 +7,6 @@ require "rails"
 # Core components
 require_relative "version_docs/document"
 require_relative "version_docs/version_manager"
-require_relative "version_docs/diff_engine"
 require_relative "version_docs/renderer"
 require_relative "version_docs/utils"
 
@@ -17,3 +16,5 @@ require_relative "version_docs/storage/in_memory"
 
 # Load Railtie to integrate with Rails
 require_relative "version_docs/railtie"
+require_relative "version_docs/diff_engine/html_diff"
+require_relative "version_docs/diff_engine/igniter"

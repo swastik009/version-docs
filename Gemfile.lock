@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/swastik009/htmldiff
+  revision: 003c74c61817b41864f7651e0c8fdb2c1117270c
+  branch: master
+  specs:
+    htmldiff (1.0.0)
+      diff-lcs
+
 PATH
   remote: .
   specs:
@@ -67,6 +75,7 @@ PLATFORMS
   arm64-darwin-24
 
 DEPENDENCIES
+  htmldiff!
   pry
   pry-byebug
   rack-test
